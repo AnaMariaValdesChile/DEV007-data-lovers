@@ -1,0 +1,891 @@
+/*---------------------------------------------------FORMATOS GENERALES----------------------------------------------*/
+/*FORMATO PÁGINA*/
+html{
+    box-sizing: border-box;
+    background-color:rgba(30, 39, 62, 1) ;
+    background-image: url(./Images/fondomapa.png);
+}
+
+/*FORMATO CUERPO DE LA PÁGINA*/
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Ubuntu", sans-serif;
+}
+
+/*FORMATO TODO EL CONTENIDO DE LA PÁGINA*/
+main{
+    align-items: center;
+    flex-grow: 1;
+}
+
+/*FORMATO BOTONES*/
+button:hover {/* :hover que haga algo cuando te posicionas encima sin dar click*/
+    cursor: pointer;
+}
+
+/*HEADER SECCIONES*/
+h2 {
+    border: 0;
+    width: 100%;
+    background-color: black;
+    font-size: 2rem;
+    color: white;
+}
+
+/*FORMATO PÁGINA CON CAMBIOS DE TAMAÑOS DE PANTALLA PARA QUE SEA RESPONSIVO*/
+@media screen and (max-width: 800px) {/*aplica el estilo indicado cuando se cumple la condición*/
+    header {
+        display: flex !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        flex-direction: column !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        justify-content: space-evenly !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        border-radius: 5% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        width: 100% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        height: max-content !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        margin: 0 !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        align-items: center !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .logo{
+        width: 60% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .itemCategories {
+        font-size: 1.3em !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .buttonsAudio {
+        width: 13% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .gallery{
+        margin: 0 !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        padding: 4% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .gallery img {
+        width: 200px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        height: 200px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        padding: 4px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    h2 {
+        font-size: 3rem !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .selects {
+        font-size: 20px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .sliderMessage{
+        font-size: 2.5em !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .listCharacters {
+        padding: 0 !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .houseCard{
+        max-width: 100% !important; /*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        padding: 0.7rem !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .imgHouseCard{
+        width: 70% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .houseCard img {
+        width: 100% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .tableSeasonsDetails{
+        width: 100% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .containerTableSeasonsDetails { 
+        font-size: 1.5rem !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        line-height: 2.3rem !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        padding: 13px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        margin: 1%;
+    }
+    .buttonHome{
+        right: 20px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        bottom: 60px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+}
+
+@media screen and (min-height: 1500px) {/*aplica el estilo indicado cuando se cumple la condición*/
+    header {
+        display: flex !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        flex-direction: column !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        justify-content: space-evenly !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        border-radius: 5% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        width: 100% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        height: max-content !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        margin: 0 !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        align-items: center !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .logo{
+        width: 70% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .chair{
+        width: 30% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .wolf{
+        width: 27%
+    }
+    .itemCategories {
+        font-size: 1.5em !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .buttonsAudio {
+        width: 15% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .gallery{
+        margin: 0 !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        padding: 8% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .gallery img {
+        width: 300px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        height: 300px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        padding: 4px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    h2 {
+        font-size: 3rem !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .selects {
+        font-size: 20px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .sliderMessage{
+        font-size: 2.5em !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .listCharacters {
+        padding: 10px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .houseCard{
+        max-width: 100% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        padding: 0.7rem !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .imgHouseCard{
+        width: 70% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .houseCard img {
+        width: 100% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .tableSeasonsDetails{
+        width: 100% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .containerTableSeasonsDetails { 
+        font-size: 1.5rem !important;
+        line-height: 2.3rem !important;
+        padding: 13px !important;
+        margin: 1% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .buttonHome{
+        right: 20px !important;
+        bottom: 60px !important;
+    }
+}
+
+@media screen and (max-width: 450px) {/*aplica el estilo indicado cuando se cumple la condición*/
+    header {
+        display: flex !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        flex-direction: column !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        justify-content: space-evenly !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        border-radius: 5% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        width: 100% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        height: max-content !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        margin: 0 !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        align-items: center !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .chair {
+        width: 32% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .logo {
+        width: 80% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .wolf {
+    width: 30% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .itemCategories {
+        font-size: .9em !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        padding: 0.3em !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .buttonsAudio {
+        width: 22% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .carousel{
+        margin: 1px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        margin-bottom: 5% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .gallery{
+        margin: 0 !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        padding: 5% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .gallery img {
+        width: 150px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        height: 150px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        padding: 4px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .inputSearch{
+        width: 11em !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .footer {
+        text-align: center !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        display: flex !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        flex-direction: column !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    h2 {
+        font-size: 2rem !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .selects {
+        font-size: 10px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .sliderMessage{
+        font-size: 1.7em !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .listCharacters {
+        padding-bottom: 85px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .houseCard{
+        flex-direction: column !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .houseCard img {
+        width: 107% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .containerTableSeasonsDetails { 
+        font-size: 1rem !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        line-height: 1.2rem !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        padding: 10px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        margin: 1% !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+    .buttonHome{
+        right: 17px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+        bottom: 125px !important;/*Important es para que se de prevalencia a ese estilo sobre lo demás*/
+    }
+}
+
+/*----------------------------------------------FORMATOS ESPECÍFICOS---------------------------------------------------------*/
+/*---------FORMATO TODO EL ENCABEZADO DE LA PÁGINA------------*/
+header{
+    background-color: rgba(3, 3, 3, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 5%;
+    width: 100%;
+    margin: 0;
+    height: max-content;
+}
+
+.chair{
+    width: 20%;
+    align-self: center;
+}
+
+.logo {
+    width: 40%;
+}
+
+.wolf {
+    width: 20%;
+    align-self: center;
+}
+
+/*---------------FORMATO TODA LA BARRA DEL MENÚ--------------*/
+.categoriesAudio{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: black;
+}
+
+/*FORMATO NAVEGADOR DEL MENÚ*/
+.categories{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+    justify-self: center;
+}
+
+.itemCategories {
+    color: #bbb;
+    position: relative; /*top y bottom es desplazamiento vertical y left y right desplazamiento horizontal*/
+    font-size: 1em;
+    font-weight: bold;
+    border: transparent;
+    padding: 0.5em;
+    border-radius: 0.2rem;
+}
+
+/* animacion de rayita debajo de los botones del menú*/
+.itemCategories::before {/*crea un "elemento" hijo del elemento seleccionado, con el nuevo estilo que se da*/
+    content: ""; /*añade contenido en línea con el texto del elemento*/
+    position: absolute; /* top, right, bottom, y left son el desplazamiento desde bordes del contenedor del elemento. Si hay márgenes, se agregan al desplazamiento*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    transform: scale(0, 1); /*modifica las coordenadas del elemento, puediendo trasladarlo, rotarlo, escalarlo, etc. Con scale se especifica una operación de escalado 2D [sx, sy]*/
+    transform-origin: left;/*modifica el origen de la transformacion del elemento*/
+    transition: transform 0.5s; /*define la transición entre el estilo anterior del elemento y el nuevo*/
+}
+
+.itemCategories:hover::before {/* :hover que haga algo cuando te posicionas encima sin dar click*//*crea un "elemento" hijo del elemento seleccionado, con el nuevo estilo que se da*/
+    transform: scale(1.1); /*modifica las coordenadas del elemento, puediendo trasladarlo, rotarlo, escalarlo, etc. Con scale se especifica una operación de escalado 2D [sx, sy]*/
+}
+
+.itemCategories:hover {/* :hover que haga algo cuando te posicionas encima sin dar click*/
+    color: #fff;
+    cursor: pointer;
+}
+
+/*FORMATO AUDIO DEL MENÚ*/
+.audio {
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+}
+
+.buttonsAudio {
+    background-color: transparent;
+    border: transparent;
+    width: 4%;
+}
+
+.buttonsAudio img {
+    width: 100%;
+}
+
+.buttonsAudio img:hover {/* :hover que haga algo cuando te posicionas encima sin dar click*/
+    filter: drop-shadow(0 2px 5px rgb(255, 255, 255));/*sombra imagen sin fondo*/
+}
+
+/*------------FORMATO DE TODO EL SLIDER (mensaje + carrusel + scroll)------------*/
+.slider{
+    width: 100%;
+    margin:0
+}
+
+/*FORMATO CARRUSEL*/
+.carousel {
+    width: 95%;
+    background-color: transparent;
+    overflow: hidden; /*Esconde los elementos que sobre salgan de su contenedor*/
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;/*Scroll sólo en la parte de abajo*/
+    margin: 30px;
+}
+
+/*FORMATO LISTA DE IMAGENES DEL SLIDER*/
+.gallery {
+    width: 1170em;
+    background-color: transparent;
+    opacity: .7;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5%;
+    margin: 0;
+    list-style: none; /*quita estilo de lista (viñetas)*/
+} 
+
+.gallery img {
+    width: 180px;
+    height: 180px;
+    min-height: 10vh;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.gallery img:hover {
+    filter: saturate(150%); /*satura las imagenes*/
+    transform: scale(1.3); /*modifica las coordenadas del elemento, puediendo trasladarlo, rotarlo, escalarlo, etc. Con scale se especifica una operación de escalado 2D [sx, sy], en este caso se aumenta la imagen*/
+    overflow: hidden; /*esconde lo que sobresalga*/
+    cursor: pointer;
+}
+
+/*FORMATO SCROLL DEL SLIDER*/
+.carousel::-webkit-scrollbar { /*formato scroll en general*/
+    height: 1.5em;
+  }
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.carousel::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 50px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.carousel::-webkit-scrollbar-thumb:hover {
+    background: rgb(119, 118, 118);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.carousel::-webkit-scrollbar-thumb:active {
+    background-color: white;
+    border-radius: 50px;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+.carousel::-webkit-scrollbar-track {
+    background: transparent;
+    border: solid 1px rgb(119, 118, 118); 
+    border-radius: 50px;
+}
+
+/* Cambiamos el fondo cuando esté en hover */
+.carousel::-webkit-scrollbar-track:hover {
+  background: transparent;
+    border: solid 3px #f2f2f2; 
+    border-radius: 50px;
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.carousel::-webkit-scrollbar-track:active {
+    background: transparent;
+      border: solid 1px black; 
+      border-radius: 50px;
+  }
+
+/*---------------FORMATO DIALOGO MODAL SLIDER---------------*/
+#modal{
+    background-color:rgba(30, 39, 62, 1);
+    border-radius: 10%;
+    border-color:  #fff;
+    padding: 40px;
+}
+
+#modal::backdrop{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#divModal{
+    width: 100%;
+    height: 520px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.imgBtnClose{
+    position: fixed; 
+    width: 5em;
+    border-color:rgba(30, 39, 62, 1);
+}
+
+#btnCloseModal{
+    width: 5em;
+    background-color:transparent;
+    border: 0 solid transparent;
+    margin: 0;
+    border-radius: 100%;
+    user-select: none;/*El texto y sus sub elementos no son seleccionables*/
+    padding: 0;
+    outline: none; /*Borde externo fuera del modelo de cajas*/
+}
+
+#btnCloseModal:hover .imgBtnClose {
+    transform:scale(1.3);/*modifica las coordenadas del elemento, puediendo trasladarlo, rotarlo, escalarlo, etc. Con scale se especifica una operación de escalado 2D [sx, sy]. en este caso aumenta de tamaño la imagen del boton*/
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));/*sombra imagen sin fondo*/
+}
+
+/*FORMATO SCROLL DEL MODAL*/
+#modal::-webkit-scrollbar {
+    width: 1em;
+  }
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+#modal::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 50px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+#modal::-webkit-scrollbar-thumb:hover {
+    background: rgb(119, 118, 118);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+}
+
+/* Cambiamos el fondo cuando esté en active */
+#modal::-webkit-scrollbar-thumb:active {
+    background-color: white;
+    border-radius: 50px;
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+#modal::-webkit-scrollbar-track {
+    background: transparent;
+    border: solid 1px rgb(119, 118, 118); 
+    border-radius: 50px;
+}
+
+/* Cambiamos el fondo cuando esté en hover */
+#modal::-webkit-scrollbar-track:hover {
+  background: transparent;
+    border: solid 3px #f2f2f2; 
+    border-radius: 50px;
+}
+
+/* Cambiamos el fondo cuando esté en active */
+#modal::-webkit-scrollbar-track:active {
+    background: transparent;
+      border: solid 1px black; 
+      border-radius: 50px;
+  }
+
+/*TARJETAS PERSONAJES SECCION MODAL*/
+.cardsCharactersModal {
+    position: relative;/*top y bottom es desplazamiento vertical y left y right desplazamiento horizontal*/
+    width: 105%;
+    height: 100%;
+    color: #2e2d31;
+    background: #131313;
+    overflow: hidden;/*Esconde los elementos que sobre salgan de su contenedor*/
+    border-radius: 20px;
+}
+  
+.containerImgModal {
+    padding: 0px 12px;
+}
+
+.imageCharacterModal {
+    width: 20rem;
+    height: 22rem;
+    border-radius: 10%;
+    margin-bottom: 8em;
+}
+  
+.cardTitleModal {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+  
+.cardContentModal {
+    position: absolute;/* top, right, bottom, y left son el desplazamiento desde bordes del contenedor del elemento. Si hay márgenes, se agregan al desplazamiento*/
+    left: 0;
+    bottom: 0;
+    width: 95%;
+    padding: 1em;
+    background: #f2f2f2;
+    border-top-left-radius: 10%; /*redondeo de la esquina superior izquierda del elemento*/
+    transform: translateY(9.5em); /*modifica las coordenadas del elemento, puediendo trasladarlo, rotarlo, escalarlo, etc. Con translateY lo translada a lo largo del eje Y*/
+    transition: transform .25s;/*define la transición entre el estilo anterior del elemento y el nuevo*/
+    font-size: 1rem;
+}
+
+.cardDescriptionModal {
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity .5s;/*define la transición entre el estilo anterior del elemento y el nuevo*/
+}
+
+/*ANIMACIÓN DE LAS TARJETAS DE PERSONAJES MODALES*/
+.cardContentModal::before {/*crea un "elemento" hijo del elemento seleccionado, con el nuevo estilo que se da*/
+    content: "";/*añade contenido en línea con el texto del elemento*/
+    position: absolute;/* top, right, bottom, y left son el desplazamiento desde bordes del contenedor del elemento. Si hay márgenes, se agregan al desplazamiento*/
+    top: -47px;
+    right: -45px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-175deg); /*modifica las coordenadas del elemento, puediendo trasladarlo, rotarlo, escalarlo, etc. Con rotate lo rota en 2D, según la cantidad de grados (deg) que se da, en sentido de las manecillas del reloj*/
+    border-radius: 50%;
+    box-shadow: inset 48px 48px #f2f2f2; /*sombra*/
+}
+  
+.cardsCharactersModal:hover .cardContentModal {/* :hover que haga algo cuando te posicionas encima sin dar click (aqui el estilo se aplica a cardcontent cuando se posiciona en la tarjeta)*/
+    transform: translateY(0);/*modifica las coordenadas del elemento, puediendo trasladarlo, rotarlo, escalarlo, etc. Con translateY lo translada a lo largo del eje Y*/
+}
+  
+.cardsCharactersModal:hover .cardDescriptionModal {/* :hover que haga algo cuando te posicionas encima sin dar click (aqui el estilo se aplica a carddescription cuando se posiciona en la tarjeta)*/
+    opacity: 1;
+    transition-delay: .25s; /*cantidad de tiempo a esperar para que se de el cambio*/
+}  
+
+/* MENSAJE CONTADOR DE MIEMBROS DE FAMILIA */
+h4{
+    color: white;
+    font-size: 2em;
+    padding: 0em;
+    background-color: #2e2d31bd;
+}
+
+/*---------------FORMATO BUSCADOR---------------*/
+.searcher {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #f2f2f2;
+    width: max-content;
+    border-radius: 18px; /* Añadir esquinas curvadas */
+}
+
+.inputSearch {
+    border: transparent; /* Estilo del borde */
+    font-size: 1.5em; /*tamaño del texto del input*/
+    padding: .1em; /*ancho del recuadro*/
+    width: 13em; /*largo del recuadro*/
+    background-color: transparent;
+    text-align: center; /*Texto centrado*/;
+}
+
+.buttonSearch {
+    background-color: transparent;
+    border: transparent;
+    width: 56px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.buttonSearch img {
+    width: 40px;
+}
+
+.buttonSearch img:hover {/* :hover que haga algo cuando te posicionas encima sin dar click*/
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); /*sombra imagen sin fondo*/
+    transform:scale(2.0);/*modifica las coordenadas del elemento, puediendo trasladarlo, rotarlo, escalarlo, etc. Con scale se especifica una operación de escalado 2D [sx, sy]. En este caso hace que la imagen de la lupa aumente*/
+}
+
+/*---------------FORMATO TARJETAS PERSONAJES------------------*/
+/*TARJETAS PERSONAJES*/
+.seccionCharacters {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.listCharacters {
+    width: 95%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /*define el tamaño de las columnas del grid. Repeat dice que se repitan las columnas con un autollenado según el tamaño de la pantalla*/
+    gap: 4em; /*espacio entre las columnas*/   
+}
+
+.cardsCharacters {
+    position: relative;/*top y bottom es desplazamiento vertical y left y right desplazamiento horizontal*/
+    width: 15.5em;
+    height: 15.5em;
+    color: #2e2d31;
+    background: #131313;
+    overflow: hidden;/*Esconde los elementos que sobre salgan de su contenedor*/
+    border-radius: 20px;
+}
+  
+.containerImg {
+    padding: 8px 12px;
+}
+
+.imageCharacter {
+    width: 14rem;
+    height: 9.5rem;
+    border-radius: 10%;
+}
+  
+.cardTitle {
+    font-weight: bold;
+    font-size: large;
+}
+  
+.cardContent {
+    position: absolute;/* top, right, bottom, y left son el desplazamiento desde bordes del contenedor del elemento. Si hay márgenes, se agregan al desplazamiento*/
+    left: 0;
+    bottom: 0;
+    width: 90%;
+    padding: 1em;
+    background: #f2f2f2;
+    border-top-left-radius: 10%; /*redondeo de la esquina superior izquierda del elemento*/
+    transform: translateY(9.5em); /*modifica las coordenadas del elemento, puediendo trasladarlo, rotarlo, escalarlo, etc. Con translateY lo translada a lo largo del eje Y*/
+    transition: transform .25s;/*define la transición entre el estilo anterior del elemento y el nuevo*/
+}
+
+.cardDescription {
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity .5s;/*define la transición entre el estilo anterior del elemento y el nuevo*/
+}
+
+/*ANIMACIÓN DE LAS TARJETAS DE PERSONAJES*/
+.cardContent::before {/*crea un "elemento" hijo del elemento seleccionado, con el nuevo estilo que se da*/
+    content: "";/*añade contenido en línea con el texto del elemento*/
+    position: absolute;/* top, right, bottom, y left son el desplazamiento desde bordes del contenedor del elemento. Si hay márgenes, se agregan al desplazamiento*/
+    top: -47px;
+    right: -52px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-175deg); /*modifica las coordenadas del elemento, puediendo trasladarlo, rotarlo, escalarlo, etc. Con rotate lo rota en 2D, según la cantidad de grados (deg) que se da, en sentido de las manecillas del reloj*/
+    border-radius: 50%;
+    box-shadow: inset 48px 48px #f2f2f2; /*sombra*/
+}
+  
+.cardsCharacters:hover .cardContent {/* :hover que haga algo cuando te posicionas encima sin dar click (aqui el estilo se aplica a cardcontent cuando se posiciona en la tarjeta)*/
+    transform: translateY(0);/*modifica las coordenadas del elemento, puediendo trasladarlo, rotarlo, escalarlo, etc. Con translateY lo translada a lo largo del eje Y*/
+}
+  
+.cardsCharacters:hover .cardDescription {/* :hover que haga algo cuando te posicionas encima sin dar click (aqui el estilo se aplica a carddescription cuando se posiciona en la tarjeta)*/
+    opacity: 1;
+    transition-delay: .25s; /*cantidad de tiempo a esperar para que se de el cambio*/
+}  
+
+/*FORMATO SELECTORES*/
+.box select {
+    background-color: black;
+    color: white;
+    padding: 2%;
+    font-size: 1.2em;
+    box-shadow: 0 5px 25px rgba(255, 255, 255, 0.4);
+}
+
+.selects {
+    display: flex;
+    justify-content: space-around
+}
+
+/*------------FORMATO TARJETAS CASAS---------------*/
+.houseCard {
+    position: relative;/*top y bottom es desplazamiento vertical y left y right desplazamiento horizontal*/
+    box-sizing: border-box; /*toma en cuenta cualquier valor que se especifique de borde o de relleno para el ancho o alto del elemento. Es decir, si se define un elemento con un ancho de 100 pixeles. Esos 100 pixeles incluíran cualquier borde o relleno que se añadan, y la caja de contenido se encogerá para absorber ese ancho extra.*/
+    max-width: 80%;
+    font-size: 1.2em;
+    border-radius: 10px;
+    background: #f2f2f2;
+    line-height: 1.2rem; /*espacio entre párrafos*/
+    padding: 2rem;
+    margin: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nameCharacterHouses {
+    text-align: justify;
+}
+
+/*------------FORMATO INFO SOBRE LA SERIE---------------*/
+.infoAbout {
+    position: relative;/*top y bottom es desplazamiento vertical y left y right desplazamiento horizontal*/
+    box-sizing: border-box;
+    max-width: 100%;
+    font-size: 1.2em;
+    border-radius: 10px;
+    background: #f2f2f2;
+    line-height: 1.2rem; /*espacio entre párrafos*/
+    padding: 2rem;
+    margin: 1%;
+}
+
+/*------------FORMATO TABLA DE DETALLES SOBRE LAS TEMPORADAS---------------*/
+.containerTableSeasonsDetails {
+    position: relative;/*top y bottom es desplazamiento vertical y left y right desplazamiento horizontal*/
+    box-sizing: border-box;
+    max-width: 100%;
+    font-size: 1.2em;
+    border-radius: 10px;
+    background: #f2f2f2;
+    line-height: 2rem;/*espacio entre párrafos*/
+    padding: 2rem;
+    margin: 1%;
+}
+
+.tableSeasonsDetails {
+    width: 95%;
+    text-align: center;
+}
+
+table {
+    border: 1px solid #000;
+    border-collapse: collapse; /*unir border de las celdas para que se hagan una línea sólida*/
+ }
+
+ th, td {
+    border: 1px solid #000;
+ }
+
+ .cellsTitle{
+    background-color: rgb(36, 36, 37);
+    color: white
+ }
+
+ .cellsSubtitle{
+    background-color: rgb(95, 97, 100);
+    color: white;
+ }
+
+ td {
+    background-color: rgba(211, 212, 212, 1);
+ }
+
+ /*------------FORMATO BOTON QUE LLEVA AL INICIO---------------*/
+.buttonHome {
+    position:fixed; /* Se mantiene el footer en la parte inferior de la página */
+    right:20px; /*Espacio margen izquierdo*/
+    bottom:50px; /*Espacio margen inferior*/
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: white;
+    overflow: hidden;/*Esconde los elementos que sobre salgan de su contenedor*/
+}
+ 
+.text1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-left:20%;
+    position: absolute;/* top, right, bottom, y left son el desplazamiento desde bordes del contenedor del elemento. Si hay márgenes, se agregan al desplazamiento*/
+    top: 24%;
+    color: #000;
+}
+  
+.text2 {
+    position: absolute;/* top, right, bottom, y left son el desplazamiento desde bordes del contenedor del elemento. Si hay márgenes, se agregan al desplazamiento*/
+    top: 20%;
+    left: -65px;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+}
+  
+.icon {
+    position: absolute;/* top, right, bottom, y left son el desplazamiento desde bordes del contenedor del elemento. Si hay márgenes, se agregan al desplazamiento*/
+    top: 0;
+    left: 0;
+    transition: transform 0.5s;/*define la transición entre el estilo anterior del elemento y el nuevo*/
+}
+  
+.icon::before {
+    position: absolute;/* top, right, bottom, y left son el desplazamiento desde bordes del contenedor del elemento. Si hay márgenes, se agregan al desplazamiento*/
+    left: -100px;
+    top: 0;
+    content: "";/*añade contenido en línea con el texto del elemento*/
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #000000;
+}
+  
+.buttonHome:hover .icon {
+    transform: translateX(100px);/*modifica las coordenadas del elemento, puediendo trasladarlo, rotarlo, escalarlo, etc. Con translateX lo translada a lo largo del eje X*/
+    transition: transform 0.5s;/*define la transición entre el estilo anterior del elemento y el nuevo*/
+}
+  
+.buttonHome:hover .text2 {
+    transform: translateX(100px); /*modifica las coordenadas del elemento, puediendo trasladarlo, rotarlo, escalarlo, etc. Con translateX lo translada a lo largo del eje X*/
+    transition: transform 0.6s;/*define la transición entre el estilo anterior del elemento y el nuevo*/
+}
+
+/*------------FORMATO FOOTER---------------*/
+.footer {
+    position:fixed; /* Se mantiene el footer en la parte inferior de la página */
+    left:0px; /*Espacio margen izquierdo*/
+    bottom:0px; /*Espacio margen inferior*/
+    background:transparent;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    color: aliceblue;
+}
+
+.socialNetworks img {
+    width: 5em;
+}
+
+.socialNetworks:hover img {
+    transform:scale(2.0);
+}
